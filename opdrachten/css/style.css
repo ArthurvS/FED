@@ -1,0 +1,49 @@
+* {
+    margin: 0; 
+    padding: 0; 
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+ul, li{
+	display: block;
+	list-style-type: none;
+	text-decoration: none;
+
+}
+a {
+	text-decoration: none;
+	padding: 2px;
+}
+
+body{
+
+}
+.disable{
+  display: none;
+}
+#wrapper{
+	max-width: 1024px;
+	margin: auto;
+}
+input, textarea, select{
+	display: block;
+	width: 210px;
+}
+legend{
+	font-size: 14pt;
+	font-weight: bolder;
+}
+#tabs h2{
+	font-size: 14pt;
+	font-weight: bolder;
+	display: inline;
+}
+.nav{
+	display: inline;
+}
+.nav li{
+	display: inline;
+}

@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Formulier</title>
+		<link rel="stylesheet" href="css/style.css">
+		<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js'></script>
+		<script src="js/organictabs.jquery.js"></script>
+		<script type='text/javascript'>
+			    $(function() {
+
+			        $("#tabs").organicTabs();
+			        
+			        $("#example-two").organicTabs({
+			            "speed": 200
+			        });
+
+			    });
+			</script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<fieldset>
+				<legend>Contactgegevens</legend>
+				<p>
+					<label for="naam">Naam</label>
+					<input type="text" id="naam" placeholder="Naam" pattern="[a-zA-Z0-9]+" required>
+				</p>
+				<p>
+					<label for="bedrijf">Bedrijf</label>
+					<input type="text" id="bedrijf" placeholder="Bedrijf" />
+				</p>
+				<p>
+					<label for="adres">Adres</label>
+					<input type="text" id="adres" placeholder="Adres" required />
+				</p>
+				<p>
+					<label for="postcode">Postcode</label>
+					<input type="text" id="postcode" placeholder="Postcode" pattern="[1-9][0-9]{3}\s?[a-zA-Z]{2}" required />
+				</p>
+				<p>
+					<label for="plaats">Plaats</label>
+					<input type="text" id="plaats" placeholder="Plaats" required />
+				</p>
+				<p>
+					<label for="telefoon">Telefoon</label>
+					<input type="tel" id="telefoon" placeholder="Telefoon" pattern="^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$" />
+				</p>
+				<p>
+					<label for="email">Email</label>
+					<input type="email" id="email" placeholder="Email" required />
+				</p>
+			</fieldset>
+			<div id="tabs">
+				<h2>Ik wil mij aanmelden</h2>
+				<ul class="nav">
+		                <li class="nav-one"><a href="#project" class="current">Voor een Project</a></li>
+		                <li class="nav-two"><a href="#stage">Als stagebedrijf</a></li>
+		        </ul>
+
+		        <div class="list-wrap">
+					<!--Project-->
+					<ul id="project">
+						<li>
+							<fieldset>
+							    <legend>Project</legend>
+							    <p>
+									<label for="titel">Titel</label>
+									<input type="text" id="titel" placeholder="Titel" required />
+								</p>
+								<p>
+									<label for="omschrijving">Opdrachtomschrijving</label>
+									<input type="text" id="omschrijving" placeholder="Omschrijving" required />
+								</p>
+								<p>
+									<label for="doelgroepomschrijving">Doelgroepomschrijving</label>
+									<input type="text" id="doelgroepomschrijving" placeholder="Doelgroepomschrijving" required />
+								</p>
+								<p>
+									<label for="doelstelling">Doelstelling / intentie van het project</label>
+									<input type="text" id="doelstelling" placeholder="Doelstelling/intentievanhetproject" required />
+								</p>
+								<p>
+									<label for="looptijd">Looptijd</label>
+									<input type="text" id="looptijd" placeholder="Looptijd" required />
+								</p>
+								<p>
+									<label for="deadline">Deadline</label>
+									<input type="date" id="deadline" max="2014-12-31" required />
+								</p>
+								<p>
+									<label for="progeschikt">Geschikt voor:</label>
+									<select id="progeschikt">
+										<option>Eerstejaars studenten</option>
+										<option>Tweedejaars studenten</option>
+										<option>Derdejaars studenten</option>
+										<option>Afstudeer studenten</option>
+										<option>Onbekend</option>
+									</select>
+								</p>
+								<p>
+									<label for="propmerking">Opmerking</label>
+									<textarea id="propmerking" rows="3"></textarea>
+								</p>
+							</fieldset>
+						</li> 
+					</ul>
+					<!--Stage-->
+					<ul id="stage" class="hide">
+						<li>
+							<fieldset>
+							    <legend>Stage</legend>
+							    <p>
+								    <label for="stagegeschikt">Geschikt voor</label>
+									<select id="stagegeschikt">
+										<option>Tweedejaars studenten</option>
+										<option>Afstudeer studenten</option>
+									</select>
+								</p>
+								<p>
+									<label>Hoe lang is de stage?</label>
+									<input type="radio" name="radios" checked> 10 weken
+									<input type="radio" name="radios"> 20 weken
+								</p>
+								<p>
+									<label for="stagedeadline">Begindatum</label>
+									<input type="date" id="stagedeadline" max="2014-12-31" required />
+								</p>
+								<p>
+									<label for="stagebeschrijving">Beschrijving werkzaamheden</label>
+									<textarea id="stagebeschrijving" rows="3" required></textarea>
+								</p>
+								<label>Beschrijving stagebedrijf</label>
+								<p>
+									<label for="bedrijfsnaam">Bedrijfsnaam</label>
+									<input type="text" id="bedrijfsnaam" placeholder="Bedrijfsnaam" required />
+								</p>
+								<p>
+									<label for="stageadres">Adres</label>
+									<input type="text" id="stageadres" placeholder="Adres" required />
+								</p>
+								<p>
+									<label for="stagepostcode">Postcode</label>
+									<input type="text" id="stagepostcode" placeholder="Postcode" pattern="[1-9][0-9]{3}\s?[a-zA-Z]{2}" required />
+								</p>
+								<p>
+									<label for="sector">Sector</label>
+									<input type="text" id="sector" placeholder="Sector" required />
+								</p>
+								<p>
+									<label for="core">Core business</label>
+									<input type="text" id="core" placeholder="Core business" />
+								</p>
+								<p>
+									<label for="stageopmerking">Opmerking</label>
+									<textarea id="stageopmerking" rows="3"></textarea>
+								</p>
+							</fieldset>
+						</li> 
+					</ul>
+				</div>
+			</div> 
+		</div>
+	</body>
+</html>

@@ -1,0 +1,153 @@
+* {
+    margin: 0; 
+    padding: 0;
+     -webkit-transition: all 1s;  /* Chrome 1-25, Safari 3.2+ */
+     -moz-transition: all 1s;  /* Firefox 4-15 */
+       -o-transition: all 1s;  /* Opera 10.50–12.00 */
+          transition: all 1s;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+ul, li{
+	list-style-type: none;
+	text-decoration: none;
+}
+a {
+	text-decoration: none;
+}
+/*------------------All--------------------*/
+body{
+	background-image: url(../img/pattern.png);
+	background-repeat: repeat;
+}
+h1, h2{
+	color: #0489B1;
+}
+h1{
+	font-size: 18pt;
+	font-weight: bold;
+	padding: 10px;
+}
+h2{
+	font-size: 14pt;
+	padding: 2px;
+}
+article, section, fieldset{
+	background-color: tomato;
+}
+h1:hover + *, h2:hover + *{
+	-webkit-transform: rotate(180deg);  /* Chrome, Safari 3.1+ */
+     -moz-transform: rotate(180deg);  /* Firefox 3.5-15 */
+      -ms-transform: rotate(180deg);  /* IE 9 */
+       -o-transform: rotate(180deg);  /* Opera 10.50-12.00 */
+          transform: rotate(180deg);  /* Firefox 16+, IE 10+, Opera 12.10+ */
+    -webkit-transition: all 1s;  /* Chrome 1-25, Safari 3.2+ */
+     -moz-transition: all 1s;  /* Firefox 4-15 */
+       -o-transition: all 1s;  /* Opera 10.50–12.00 */
+          transition: all 1s;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+}
+h1 + *, h2 + *{
+	 -webkit-transition: all 1s;  /* Chrome 1-25, Safari 3.2+ */
+     -moz-transition: all 1s;  /* Firefox 4-15 */
+       -o-transition: all 1s;  /* Opera 10.50–12.00 */
+          transition: all 1s;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+}
+@-webkit-keyframes shadow {
+	0%{text-shadow: 18px 0px 0px rgba(0, 0, 0, 1);}
+	100%{text-shadow: -18px 0px 0px rgba(0, 0, 0, 1);}
+}
+section>article>p{
+	-webkit-animation: shadow 1s infinite alternate;
+}
+/*-------------Formulier----------------*/
+fieldset{
+	margin: 0px auto 0px auto;
+	max-width: 1024px;
+}
+fieldset p{
+	padding: 5px;
+}
+fieldset p:nth-of-type(1n){
+	background: rgb(149,213,219); /* Old browsers */
+    background: linear-gradient(to bottom,  rgba(149,213,219,1) 0%,rgba(57,130,53,1) 100%); /* W3C */
+
+}
+fieldset p:nth-of-type(2n){
+	background: rgb(254,254,253); /* Old browsers */
+    background: linear-gradient(to bottom,  rgba(254,254,253,1) 0%,rgba(220,227,196,1) 0%,rgba(155,135,153,1) 0%,rgba(174,191,118,1) 100%); /* W3C */
+}
+@-webkit-keyframes radius {
+	0%{border-top-right-radius: 300px;}
+	32%{border-top-left-radius: 300px;}
+	70%{border-bottom-right-radius: 300px;}
+	100%{border-bottom-left-radius: 300px;}
+}
+section + form input{
+	-webkit-animation: radius 1s infinite;
+	margin: 10px;
+	-webkit-transition: padding 1s;  /* Chrome 1-25, Safari 3.2+ */
+     -moz-transition: padding 1s;  /* Firefox 4-15 */
+       -o-transition: padding 1s;  /* Opera 10.50–12.00 */
+          transition: padding 1s;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+}
+@-webkit-keyframes rainbow {
+  0% {border-color: hsl(0, 100%, 50%);}
+  100% {border-color: hsl(255, 100%, 50%);}
+}
+
+label:before{
+	content: " *";
+	color: red;
+}
+section + form input:focus{
+	outline: none;
+	 border: 15px solid hsl(0, 100%, 50%);
+  -webkit-animation: rainbow 0.5s infinite alternate;
+	padding: 100px;
+	-webkit-transition: padding 1s;  /* Chrome 1-25, Safari 3.2+ */
+     -moz-transition: padding 1s;  /* Firefox 4-15 */
+       -o-transition: padding 1s;  /* Opera 10.50–12.00 */
+          transition: padding 1s;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+}
+section + form input[type="radio"]{
+	display: inline;
+	width: 50px;
+}
+section + form input, textarea, select{
+	display: block;
+	width: 210px;
+}
+legend{
+	font-size: 14pt;
+	font-weight: bolder;
+}
+/*----------Artikel------------------*/
+
+
+/*============Small size==============*/
+@media (min-width: 29em){
+video{
+	width: 100%;
+}
+}
+/*=============MediumSize===========*/
+@media (min-width: 47em){
+	video{
+	position: static;
+	width: 30em;
+}
+	section{
+		width: 100%;
+	}
+}
+/*============Big Size===============*/
+@media (min-width: 63em){
+	section{
+	width: 63em;
+	margin: 0px auto 0px auto;
+}
+
+}

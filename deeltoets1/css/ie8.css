@@ -1,0 +1,9 @@
+header, main, footer, article, aside, details, figcaption, figure, header, hgroup, menu, nav, section {
+		display: 	none;
+	}
+	body{
+		background: none; 
+	}
+	.tooSmall img{
+		width: 100%;
+	}	
